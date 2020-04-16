@@ -1,12 +1,5 @@
-import com.luisenricke.repository.HibernateSpeakerRepositoryImp;
-import com.luisenricke.repository.SpeakerRepository;
-import com.luisenricke.service.SpeakerService;
-import com.luisenricke.service.SpeakerServiceImp;
-import org.springframework.beans.factory.config.BeanDefinition;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Scope;
 
 @Configuration
 @ComponentScan({"com.luisenricke"})
