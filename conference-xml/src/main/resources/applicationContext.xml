@@ -7,4 +7,9 @@
     <bean name="speakerRepository"
           class="com.luisenricke.repository.HibernateSpeakerRepositoryImp"/>
 
+    <bean name="speakerService"
+          class="com.luisenricke.service.SpeakerServiceImp">
+        <property name="speakerRepository" ref="speakerRepository"/>
+    </bean>
+
 </beans>
