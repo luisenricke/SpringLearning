@@ -3,12 +3,14 @@ package com.luisenricke.service;
 import com.luisenricke.model.Speaker;
 import com.luisenricke.repository.SpeakerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
 import java.util.List;
 
 @Service("speakerService")
+@Profile("dev")
 //@Scope(BeanDefinition.SCOPE_SINGLETON)
 public class SpeakerServiceImp implements SpeakerService {
 
