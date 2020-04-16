@@ -1,5 +1,3 @@
-package com.luisenricke;
-
 import com.luisenricke.service.SpeakerService;
 import com.luisenricke.service.SpeakerServiceImp;
 
