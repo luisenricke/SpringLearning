@@ -9,7 +9,7 @@
 
     <bean name="speakerService"
           class="com.luisenricke.service.SpeakerServiceImp">
-        <property name="speakerRepository" ref="speakerRepository"/>
+        <constructor-arg index="0" ref="speakerRepository"/>
     </bean>
 
 </beans>
