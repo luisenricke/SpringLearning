@@ -8,8 +8,10 @@
           class="com.luisenricke.repository.HibernateSpeakerRepositoryImp"/>
 
     <bean name="speakerService"
-          class="com.luisenricke.service.SpeakerServiceImp">
-        <constructor-arg index="0" ref="speakerRepository"/>
+          class="com.luisenricke.service.SpeakerServiceImp" autowire="constructor">
+        <!-- <property name="speakerRepository" ref="speakerRepository"/> -->
+        <!-- <constructor-arg index="0" ref="speakerRepository"/> -->
+
     </bean>
 
 </beans>
