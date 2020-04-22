@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Index</title>
+    <title>Greeting</title>
 </head>
 <body>
-    <h1>Other :)</h1>
+    <h1>${message}</h1>
 </body>
 </html>
