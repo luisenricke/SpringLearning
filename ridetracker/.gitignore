@@ -31,5 +31,5 @@ out/
 ### VS Code ###
 .vscode/
 
-# Dev configuration
-src/main/resource/application-dev.properties
+### Dev configuration ###
+**/*-dev.*
