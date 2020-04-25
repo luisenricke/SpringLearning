@@ -16,23 +16,6 @@ public class TrackzillaApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(TrackzillaApplication.class, args);
-        System.out.println("Start app");
+        System.out.println("\n\n ------- Start app ------- \n\n");
     }
-
-    @Bean
-    public CommandLineRunner demoApplicationRepository(ApplicationRepository repository) {
-        return (args) -> {
-            repository.save(new Application("TrackZilla", "Application for tracking bugs.", "luis.villalobos"));
-            repository.save(new Application("Expenses", "Application to track expense reports.", "nashe.osorio"));
-            repository.save(new Application("Notifications",
-                                            "Application to send alets and notifications to users.",
-                                            "test.test"
-            ));
-
-            for (Application application : repository.findAll()) {
-                log.info("The app is: " + application.toString());
-            }
-        };
-    }
-
 }
