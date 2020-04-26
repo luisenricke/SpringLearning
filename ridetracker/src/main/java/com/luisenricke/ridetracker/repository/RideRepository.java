@@ -6,8 +6,15 @@ import java.util.List;
 
 public interface RideRepository {
 
-    List<Ride> getRides();
+    Ride get(Integer id);
 
-    Ride createRide(Ride ride);
+    List<Ride> get();
 
+    Ride create(Ride ride);
+
+    Ride update(Ride ride);
+
+    int delete(int id);
+
+    void updatesDate(List<Object[]> pairs);
 }
