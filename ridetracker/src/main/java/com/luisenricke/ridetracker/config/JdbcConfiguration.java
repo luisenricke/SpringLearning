@@ -5,12 +5,15 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.sql.DataSource;
 
 @Configuration
 @ComponentScan(basePackages = "com.luisenricke")
+@EnableTransactionManagement
 public class JdbcConfiguration {
 
     @Bean
@@ -35,5 +38,12 @@ public class JdbcConfiguration {
         jdbcTemplate.setDataSource(dataSource);
         // jdbcTemplate.setResultsMapCaseInsensitive(true);
         return jdbcTemplate;
+    }
+
+    @Bean
+    public DataSourceTransactionManager transactionManager(DataSource dataSource) {
+        DataSourceTransactionManager transactionManager = new DataSourceTransactionManager();
+        transactionManager.setDataSource(dataSource);
+        return transactionManager;
     }
 }
